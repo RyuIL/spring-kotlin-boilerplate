@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: local
+  datasource:
+    url: jdbc:mysql://localhost:3306/bank_salad?serverTimezone=Asia/Seoul
+    username: root
+    password: sa
+
+  jpa:
+    show-sql: true
+    hibernate:
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    properties:
+      hibernate.default_batch_fetch_size: 1000
+  flyway:
+    url: jdbc:mysql://localhost:3306/bank_salad?serverTimezone=Asia/Seoul
+    schemas: bank_salad
+    user: root
+    password: sa
+    enabled: true
+    clean-on-validation-error: true

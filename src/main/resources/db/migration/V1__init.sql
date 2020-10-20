@@ -1,0 +1,4 @@
+-- DROP TABLE IF EXISTS Stock;
+-- CREATE TABLE Stock (
+--     id BIGINT PRIMARY KEY
+-- );
